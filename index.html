@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Monroe Films | Cinematic Storytelling</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600&family=Playfair+Display&display=swap" rel="stylesheet">
+
+<style>
+:root {
+  --gold: #d4af37;
+  --soft-gold: #f5e6b8;
+  --black: #000;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: black;
+  color: var(--gold);
+  font-family: 'Playfair Display', serif;
+  line-height: 1.6;
+}
+
+/* HERO */
+.hero {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 2rem;
+  background: radial-gradient(circle, rgba(212,175,55,0.12), transparent 70%);
+}
+
+.hero h1 {
+  font-family: 'Cinzel', serif;
+  font-size: 4rem;
+  letter-spacing: 0.15em;
+  animation: fadeUp 1.5s ease forwards;
+}
+
+.hero p {
+  color: var(--soft-gold);
+  margin-top: 1rem;
+  animation: fadeUp 2s ease forwards;
+}
+
+.hero span {
+  display: block;
+  margin-top: 1.5rem;
+  font-size: 0.8rem;
+  letter-spacing: 0.3em;
+}
+
+/* SECTIONS */
+section {
+  padding: 5rem 2rem;
+  max-width: 1100px;
+  margin: auto;
+}
+
+h2 {
+  font-family: 'Cinzel', serif;
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.about p {
+  color: var(--soft-gold);
+  margin-bottom: 1rem;
+}
+
+/* SERVICES */
+.services {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+}
+
+.service {
+  border: 1px solid rgba(212,175,55,0.3);
+  padding: 2rem;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.service:hover {
+  transform: scale(1.05);
+}
+
+/* CTA */
+.cta {
+  text-align: center;
+}
+
+.cta a {
+  display: inline-block;
+  margin-top: 2rem;
+  padding: 1rem 2.5rem;
+  background: var(--gold);
+  color: black;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 30px;
+}
+
+/* FOOTER */
+footer {
+  text-align: center;
+  padding: 2rem;
+  font-size: 0.8rem;
+  color: rgba(245,230,184,0.6);
+  border-top: 1px solid rgba(212,175,55,0.2);
+}
+
+/* ANIMATION */
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+</style>
+</head>
+
+<body>
+
+<div class="hero">
+  <div>
+    <h1>MONROE FILMS</h1>
+    <p>Cinematic storytelling with a timeless soul</p>
+    <span>25+ YEARS OF FILMMAKING EXPERIENCE</span>
+  </div>
+</div>
+
+<section class="about">
+  <h2>Our Story</h2>
+  <p>
+    Monroe Films was built on a love for classic cinema and modern storytelling.
+    For over 25 years, we’ve captured stories with emotion, elegance, and purpose.
+  </p>
+  <p>
+    With 14 years specializing in weddings, we understand how to preserve
+    moments that last a lifetime.
+  </p>
+</section>
+
+<section>
+  <h2>Our Services</h2>
+  <div class="services">
+    <div class="service">Commercial</div>
+    <div class="service">Residential</div>
+    <div class="service">Sports</div>
+    <div class="service">Weddings</div>
+  </div>
+</section>
+
+<section class="cta">
+  <h2>Let’s Tell Your Story</h2>
+  <p style="color: var(--soft-gold);">Bring your vision to life with Monroe Films.</p>
+  <a href="#">Contact Us</a>
+</section>
+
+<footer>
+  © 2026 Monroe Films · Cinematic Storytelling
+</footer>
+
+</body>
+</html>
