@@ -10,7 +10,7 @@
 <style>
 :root {
   --gold: #d4af37;
-  --soft-gold: #f5e6b8;
+  --cream: #f5e6b8;
   --black: #000;
 }
 
@@ -24,21 +24,25 @@ body {
   background: black;
   color: var(--gold);
   font-family: 'Playfair Display', serif;
-  line-height: 1.6;
+  line-height: 1.7;
 }
 
-/* HERO */
+/* ================= HERO ================= */
+
 .hero {
-  position: relative;
   min-height: 90vh;
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
   padding: 4rem 2rem;
-  background:
-    linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.85)),
-    url("images/5752885a-2aca-4b42-89e8-0363593650d5.png") right center / cover no-repeat;
+
+  background-image:
+    linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.85)),
+    url("5752885a-2aca-4b42-89e8-0363593650d5.png");
+  background-size: cover;
+  background-position: center right;
+  background-repeat: no-repeat;
 }
 
 .hero h1 {
@@ -47,19 +51,17 @@ body {
   letter-spacing: 0.15em;
 }
 
-/* NAME */
 .hero .name {
   font-family: 'Cinzel', serif;
-  font-size: 1.1rem;
-  letter-spacing: 0.25em;
+  font-size: 1rem;
+  letter-spacing: 0.3em;
   margin-top: 0.6rem;
-  color: var(--soft-gold);
-  opacity: 0.9;
+  color: var(--cream);
 }
 
 .hero p {
-  color: var(--soft-gold);
-  margin-top: 1.2rem;
+  color: var(--cream);
+  margin-top: 1.5rem;
   font-size: 1.1rem;
 }
 
@@ -68,77 +70,88 @@ body {
   margin-top: 1.2rem;
   font-size: 0.75rem;
   letter-spacing: 0.3em;
-  opacity: 0.9;
 }
 
-/* BUTTON */
+/* ================= BUTTON ================= */
+
 .cta-button {
   display: inline-block;
-  margin-top: 2.5rem;
-  padding: 1rem 2.8rem;
+  margin-top: 2.8rem;
+  padding: 1rem 3rem;
   background: var(--gold);
   color: black;
   text-decoration: none;
   font-weight: bold;
-  border-radius: 30px;
+  border-radius: 40px;
   font-family: 'Cinzel', serif;
   letter-spacing: 0.15em;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition: all 0.3s ease;
 }
 
 .cta-button:hover {
   transform: translateY(-2px);
-  box-shadow: 0 10px 30px rgba(212,175,55,0.4);
+  box-shadow: 0 12px 30px rgba(212,175,55,0.45);
 }
 
-/* ABOUT */
+/* ================= ABOUT (CREAM BAND) ================= */
+
 .about {
-  max-width: 900px;
-  margin: 5rem auto;
-  padding: 3.5rem 3rem;
+  width: 100%;
+  background: var(--cream);
+  padding: 6rem 2rem;
   text-align: center;
-
-  /* THIS is the cream box */
-  background: rgba(245,230,184,0.14);
-
-  /* Gold edge */
-  border: 1px solid rgba(212,175,55,0.45);
-
-  /* Depth so it separates from black */
-  box-shadow:
-    0 0 0 1px rgba(212,175,55,0.15),
-    0 30px 60px rgba(0,0,0,0.6);
 }
 
-/* CONTACT */
+.about-inner {
+  max-width: 900px;
+  margin: auto;
+}
+
+.about h2 {
+  font-family: 'Cinzel', serif;
+  font-size: 3rem;
+  margin-bottom: 2.5rem;
+  color: #000;
+}
+
+.about p {
+  font-size: 1.1rem;
+  line-height: 1.9;
+  color: #111;
+  max-width: 800px;
+  margin: auto;
+}
+
+/* ================= CONTACT ================= */
+
 .contact {
   max-width: 700px;
   margin: auto;
-  padding: 4rem 2rem;
+  padding: 5rem 2rem;
   text-align: center;
 }
 
 .contact h2 {
   font-family: 'Cinzel', serif;
-  font-size: 2.2rem;
+  font-size: 2.4rem;
   margin-bottom: 1rem;
 }
 
 .contact p {
-  color: var(--soft-gold);
-  margin-bottom: 2rem;
+  color: var(--cream);
+  margin-bottom: 2.5rem;
 }
 
 form {
   display: grid;
-  gap: 1rem;
+  gap: 1.2rem;
 }
 
 input, textarea {
   padding: 1rem;
   background: transparent;
-  border: 1px solid rgba(212,175,55,0.4);
-  color: var(--soft-gold);
+  border: 1px solid rgba(212,175,55,0.45);
+  color: var(--cream);
   font-family: inherit;
 }
 
@@ -154,9 +167,12 @@ button {
   font-weight: bold;
   border: none;
   cursor: pointer;
+  font-family: 'Cinzel', serif;
+  letter-spacing: 0.15em;
 }
 
-/* FOOTER */
+/* ================= FOOTER ================= */
+
 footer {
   text-align: center;
   padding: 2rem;
@@ -165,14 +181,15 @@ footer {
   border-top: 1px solid rgba(212,175,55,0.2);
 }
 
-/* MOBILE */
+/* ================= MOBILE ================= */
+
 @media (max-width: 768px) {
   .hero h1 {
     font-size: 2.6rem;
   }
 
-  .hero .name {
-    font-size: 0.9rem;
+  .about h2 {
+    font-size: 2.2rem;
   }
 }
 </style>
@@ -180,29 +197,34 @@ footer {
 
 <body>
 
-<div class="hero">
+<!-- HERO -->
+<section class="hero">
   <div>
     <h1>MONROE FILMS</h1>
     <div class="name">JIM MONROE</div>
 
-    <p>Capturing timeless moments through cinematic storytelling</p>
+    <p>Cinematic storytelling with a timeless soul</p>
     <span>25+ YEARS OF FILMMAKING EXPERIENCE</span>
 
     <a href="films.html" class="cta-button">Watch Our Films</a>
   </div>
-</div>
-
-<section class="about">
-  <h2>Our Philosophy</h2>
-  <p>
-    I approach every film as a work of art — crafted with intention,
-    emotion, and purpose. No matter who you are or what story you’re
-    telling, we believe every moment deserves to be seen, felt,
-    and remembered. Our role is to become your visual storytellers,
-    translating life into cinema.
-  </p>
 </section>
 
+<!-- ABOUT / MANIFESTO -->
+<section class="about">
+  <div class="about-inner">
+    <h2>Capturing Timeless Moments</h2>
+    <p>
+      I approach every project with the mindset of an artist and the intention
+      of a storyteller. No matter who you are or what story you’re telling,
+      the goal remains the same — to see the heart of it, shape it with care,
+      and bring it to life through cinematic imagery. Every film is an
+      opportunity to create something meaningful, honest, and enduring.
+    </p>
+  </div>
+</section>
+
+<!-- CONTACT -->
 <section class="contact">
   <h2>Let’s Tell Your Story</h2>
   <p>Reach out and let’s create something meaningful together.</p>
@@ -221,6 +243,3 @@ footer {
 
 </body>
 </html>
-
-
-
