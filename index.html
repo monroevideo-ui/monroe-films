@@ -94,24 +94,20 @@ body {
 /* ABOUT */
 .about {
   max-width: 900px;
-  margin: 4rem auto;
-  padding: 3rem 2.5rem;
+  margin: 5rem auto;
+  padding: 3.5rem 3rem;
   text-align: center;
-  background: rgba(245,230,184,0.06);
-  border: 1px solid rgba(212,175,55,0.35);
-}
 
-.about h2 {
-  font-family: 'Cinzel', serif;
-  font-size: 2.3rem;
-  margin-bottom: 1.5rem;
-}
+  /* THIS is the cream box */
+  background: rgba(245,230,184,0.14);
 
-.about p {
-  color: var(--soft-gold);
-  max-width: 700px;
-  margin: auto;
-  font-size: 1.05rem;
+  /* Gold edge */
+  border: 1px solid rgba(212,175,55,0.45);
+
+  /* Depth so it separates from black */
+  box-shadow:
+    0 0 0 1px rgba(212,175,55,0.15),
+    0 30px 60px rgba(0,0,0,0.6);
 }
 
 /* CONTACT */
@@ -225,5 +221,6 @@ footer {
 
 </body>
 </html>
+
 
 
