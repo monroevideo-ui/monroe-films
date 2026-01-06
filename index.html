@@ -50,20 +50,6 @@ body {
   animation: fadeUp 1.5s ease forwards;
 }
 
-/* FILM GRID */
-.film-grid {
-  margin: 2rem 0;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 1rem;
-}
-
-.film-grid iframe {
-  width: 100%;
-  aspect-ratio: 16 / 9;
-  border: 1px solid rgba(212,175,55,0.3);
-}
-
 .hero p {
   color: var(--soft-gold);
   margin-top: 1rem;
@@ -75,6 +61,23 @@ body {
   margin-top: 1.5rem;
   font-size: 0.8rem;
   letter-spacing: 0.3em;
+}
+
+/* FILM GRID */
+.film-grid {
+  margin-top: 2rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+
+.film {
+  border: 1px solid rgba(212,175,55,0.3);
+  overflow: hidden;
+}
+
+.film > div {
+  width: 100%;
 }
 
 /* SECTIONS */
@@ -164,19 +167,71 @@ footer {
 <div class="hero">
   <div class="hero-content">
     <h1>MONROE FILMS</h1>
-
     <p>Cinematic storytelling with a timeless soul</p>
     <span>25+ YEARS OF FILMMAKING EXPERIENCE</span>
+
+    <!-- FILMS -->
+    <div class="film-grid">
+
+      <!-- FILM 1 -->
+      <div class="film">
+        <div style="padding:42.19% 0 0 0;position:relative;">
+          <iframe
+            src="https://player.vimeo.com/video/340544344?title=0&byline=0&portrait=0&badge=0&autopause=0"
+            frameborder="0"
+            allow="autoplay; fullscreen; picture-in-picture"
+            style="position:absolute;top:0;left:0;width:100%;height:100%;"
+            title="Melisa & Mario">
+          </iframe>
+        </div>
+      </div>
+
+      <!-- FILM 2 -->
+      <div class="film">
+        <div style="padding:42.19% 0 0 0;position:relative;">
+          <iframe
+            src="https://player.vimeo.com/video/1130034649?badge=0&autopause=0"
+            frameborder="0"
+            allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share"
+            referrerpolicy="strict-origin-when-cross-origin"
+            style="position:absolute;top:0;left:0;width:100%;height:100%;"
+            title="Notsi NT Dedication">
+          </iframe>
+        </div>
+      </div>
+
+      <!-- FILM 3 -->
+      <div class="film">
+        <div style="padding:56.25% 0 0 0;position:relative;">
+          <iframe
+            src="https://player.vimeo.com/video/1005887576?badge=0&autopause=0"
+            frameborder="0"
+            allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share"
+            referrerpolicy="strict-origin-when-cross-origin"
+            style="position:absolute;top:0;left:0;width:100%;height:100%;"
+            title="Etulo Dedication">
+          </iframe>
+        </div>
+      </div>
+
+      <!-- FILM 4 -->
+      <div class="film">
+        <div style="padding:56.25% 0 0 0;position:relative;">
+          <iframe
+            src="https://player.vimeo.com/video/596177316?title=0&byline=0&portrait=0&badge=0&autopause=0"
+            frameborder="0"
+            allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share"
+            referrerpolicy="strict-origin-when-cross-origin"
+            style="position:absolute;top:0;left:0;width:100%;height:100%;"
+            title="Melissa Campbell - Discerning Designs">
+          </iframe>
+        </div>
+      </div>
+
+    </div>
   </div>
 </div>
-  
- <!-- FILMS (PASTE YOUR URLs BELOW) -->
-    <div class="film-grid">
-      <iframe src="https://player.vimeo.com/monroeweddingfilms/melisa-and-mario?fl=ip&fe=ec" allowfullscreen></iframe>
-      <iframe src="https://player.vimeo.com/1130034649?fl=ls&fe=ec" allowfullscreen></iframe>
-      <iframe src="https://player.vimeo.com/1005887576?share=copy&fl=sv&fe=ci" allowfullscreen></iframe>
-      <iframe src="https://player.vimeo.com/596177316?fl=ip&fe=ec" allowfullscreen></iframe>
-    </div>
+
 <section class="about">
   <h2>Our Story</h2>
   <p>
@@ -209,6 +264,6 @@ footer {
   © 2026 Monroe Films · Cinematic Storytelling
 </footer>
 
+<script src="https://player.vimeo.com/api/player.js"></script>
 </body>
 </html>
-
