@@ -11,6 +11,7 @@
 :root {
   --gold: #d4af37;
   --soft-gold: #f5e6b8;
+  --cream: #f2e6cf;
   --black: #000;
 }
 
@@ -24,246 +25,233 @@ body {
   background: black;
   color: var(--gold);
   font-family: 'Playfair Display', serif;
-  line-height: 1.6;
+  line-height: 1.4;
 }
 
 /* HERO */
 .hero {
-  height: 100vh;
+  min-height: 90vh;
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
-  padding: 2rem;
-  background: radial-gradient(circle, rgba(212,175,55,0.12), transparent 70%);
-}
-
-.hero-content {
-  max-width: 1100px;
-  margin: auto;
+  padding: 4rem 2rem;
+  background:
+    linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.65)),
+    url("hero.jpg") center / cover no-repeat;
 }
 
 .hero h1 {
   font-family: 'Cinzel', serif;
   font-size: 4rem;
-  letter-spacing: 0.15em;
-  animation: fadeUp 1.5s ease forwards;
+  letter-spacing: 0.18em;
 }
 
 .hero p {
   color: var(--soft-gold);
   margin-top: 1rem;
-  animation: fadeUp 2s ease forwards;
+  letter-spacing: 0.15em;
 }
 
 .hero span {
   display: block;
-  margin-top: 1.5rem;
+  margin-top: 0.75rem;
   font-size: 0.8rem;
-  letter-spacing: 0.3em;
+  letter-spacing: 0.25em;
 }
 
-/* FILM GRID */
-.film-grid {
+/* BUTTON */
+.button {
+  display: inline-block;
   margin-top: 2rem;
+  padding: 0.9rem 2.5rem;
+  border: 1px solid var(--gold);
+  color: var(--gold);
+  text-decoration: none;
+  letter-spacing: 0.15em;
+  font-size: 0.75rem;
+  transition: all 0.3s ease;
+}
+
+.button:hover {
+  background: var(--gold);
+  color: black;
+}
+
+/* DARK SECTION */
+.dark-section {
+  padding: 4rem 2rem;
+  text-align: center;
+  background: black;
+}
+
+.dark-section h2 {
+  font-family: 'Cinzel', serif;
+  font-size: 2.6rem;
+  margin-bottom: 1rem;
+}
+
+.dark-section p {
+  color: var(--soft-gold);
+  max-width: 700px;
+  margin: auto;
+}
+
+/* LIGHT SERVICES SECTION */
+.services-section {
+  background: var(--cream);
+  color: black;
+  padding: 4rem 2rem;
+  text-align: center;
+}
+
+.services-section h3 {
+  font-family: 'Cinzel', serif;
+  font-size: 2.3rem;
+  margin-bottom: 2rem;
+}
+
+.services {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 1rem;
-}
-
-.film {
-  border: 1px solid rgba(212,175,55,0.3);
-  overflow: hidden;
-}
-
-.film > div {
-  width: 100%;
-}
-
-/* SECTIONS */
-section {
-  padding: 5rem 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 2rem;
   max-width: 1100px;
   margin: auto;
 }
 
-h2 {
+.service {
+  text-align: center;
+}
+
+.service img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.service h4 {
+  margin-top: 1rem;
+  font-weight: normal;
+  letter-spacing: 0.1em;
+}
+
+/* CONTACT */
+.contact {
+  background: black;
+  padding: 4rem 2rem;
+  text-align: center;
+}
+
+.contact h2 {
   font-family: 'Cinzel', serif;
   font-size: 2.5rem;
   margin-bottom: 1.5rem;
 }
 
-.about p {
-  color: var(--soft-gold);
+form {
+  max-width: 600px;
+  margin: auto;
+}
+
+input, textarea {
+  width: 100%;
+  background: transparent;
+  border: 1px solid rgba(212,175,55,0.4);
+  padding: 0.8rem;
   margin-bottom: 1rem;
+  color: var(--soft-gold);
+  font-family: inherit;
 }
 
-/* SERVICES */
-.services {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 1.5rem;
+textarea {
+  height: 140px;
+  resize: none;
 }
 
-.service {
-  border: 1px solid rgba(212,175,55,0.3);
-  padding: 2rem;
-  text-align: center;
-  transition: transform 0.3s ease;
+input::placeholder,
+textarea::placeholder {
+  color: rgba(245,230,184,0.6);
 }
 
-.service:hover {
-  transform: scale(1.05);
-}
-
-/* CTA */
-.cta {
-  text-align: center;
-}
-
-.cta a {
-  display: inline-block;
-  margin-top: 2rem;
-  padding: 1rem 2.5rem;
+form button {
   background: var(--gold);
   color: black;
-  text-decoration: none;
+  border: none;
+  padding: 0.8rem 2.5rem;
   font-weight: bold;
-  border-radius: 30px;
+  letter-spacing: 0.15em;
+  cursor: pointer;
 }
 
 /* FOOTER */
 footer {
+  padding: 1.5rem;
+  font-size: 0.75rem;
   text-align: center;
-  padding: 2rem;
-  font-size: 0.8rem;
   color: rgba(245,230,184,0.6);
-  border-top: 1px solid rgba(212,175,55,0.2);
-}
-
-/* MOBILE */
-@media (max-width: 768px) {
-  .film-grid {
-    grid-template-columns: 1fr;
-  }
-}
-
-/* ANIMATION */
-@keyframes fadeUp {
-  from {
-    opacity: 0;
-    transform: translateY(30px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
 }
 </style>
 </head>
 
 <body>
 
-<div class="hero">
-  <div class="hero-content">
+<!-- HERO -->
+<section class="hero">
+  <div>
     <h1>MONROE FILMS</h1>
-    <p>Cinematic storytelling with a timeless soul</p>
-    <span>25+ YEARS OF FILMMAKING EXPERIENCE</span>
+    <p>CINEMATIC STORYTELLING</p>
+    <span>25+ YEARS OF EXPERIENCE</span>
+    <a href="#" class="button">WATCH OUR FILMS</a>
+  </div>
+</section>
 
-    <!-- FILMS -->
-    <div class="film-grid">
+<!-- STORY -->
+<section class="dark-section">
+  <h2>Capturing Timeless Moments</h2>
+  <p>
+    With over 25 years of filmmaking experience and 14 years specializing in weddings,
+    we bring your story to life with cinematic artistry.
+  </p>
+</section>
 
-      <!-- FILM 1 -->
-      <div class="film">
-        <div style="padding:42.19% 0 0 0;position:relative;">
-          <iframe
-            src="https://player.vimeo.com/video/340544344?title=0&byline=0&portrait=0&badge=0&autopause=0"
-            frameborder="0"
-            allow="autoplay; fullscreen; picture-in-picture"
-            style="position:absolute;top:0;left:0;width:100%;height:100%;"
-            title="Melisa & Mario">
-          </iframe>
-        </div>
-      </div>
-
-      <!-- FILM 2 -->
-      <div class="film">
-        <div style="padding:42.19% 0 0 0;position:relative;">
-          <iframe
-            src="https://player.vimeo.com/video/1130034649?badge=0&autopause=0"
-            frameborder="0"
-            allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share"
-            referrerpolicy="strict-origin-when-cross-origin"
-            style="position:absolute;top:0;left:0;width:100%;height:100%;"
-            title="Notsi NT Dedication">
-          </iframe>
-        </div>
-      </div>
-
-      <!-- FILM 3 -->
-      <div class="film">
-        <div style="padding:56.25% 0 0 0;position:relative;">
-          <iframe
-            src="https://player.vimeo.com/video/1005887576?badge=0&autopause=0"
-            frameborder="0"
-            allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share"
-            referrerpolicy="strict-origin-when-cross-origin"
-            style="position:absolute;top:0;left:0;width:100%;height:100%;"
-            title="Etulo Dedication">
-          </iframe>
-        </div>
-      </div>
-
-      <!-- FILM 4 -->
-      <div class="film">
-        <div style="padding:56.25% 0 0 0;position:relative;">
-          <iframe
-            src="https://player.vimeo.com/video/596177316?title=0&byline=0&portrait=0&badge=0&autopause=0"
-            frameborder="0"
-            allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share"
-            referrerpolicy="strict-origin-when-cross-origin"
-            style="position:absolute;top:0;left:0;width:100%;height:100%;"
-            title="Melissa Campbell - Discerning Designs">
-          </iframe>
-        </div>
-      </div>
-
+<!-- SERVICES -->
+<section class="services-section">
+  <h3>What We Do</h3>
+  <div class="services">
+    <div class="service">
+      <img src="commercial.jpg" alt="">
+      <h4>Commercial</h4>
+    </div>
+    <div class="service">
+      <img src="residential.jpg" alt="">
+      <h4>Residential</h4>
+    </div>
+    <div class="service">
+      <img src="sports.jpg" alt="">
+      <h4>Sports</h4>
+    </div>
+    <div class="service">
+      <img src="weddings.jpg" alt="">
+      <h4>Weddings</h4>
     </div>
   </div>
-</div>
-
-<section class="about">
-  <h2>Our Story</h2>
-  <p>
-    Monroe Films was built on a love for classic cinema and modern storytelling.
-    For over 25 years, we’ve captured stories with emotion, elegance, and purpose.
-  </p>
-  <p>
-    With 14 years specializing in weddings, we understand how to preserve
-    moments that last a lifetime.
-  </p>
 </section>
 
-<section>
-  <h2>Our Services</h2>
-  <div class="services">
-    <div class="service">Commercial</div>
-    <div class="service">Residential</div>
-    <div class="service">Sports</div>
-    <div class="service">Weddings</div>
-  </div>
-</section>
-
-<section class="cta">
+<!-- CONTACT -->
+<section class="contact">
   <h2>Let’s Tell Your Story</h2>
-  <p style="color: var(--soft-gold);">Bring your vision to life with Monroe Films.</p>
-  <a href="#">Contact Us</a>
+
+  <form>
+    <input type="text" placeholder="Name" required>
+    <input type="email" placeholder="Email" required>
+    <textarea placeholder="Tell us about your project"></textarea>
+    <button type="submit">SEND MESSAGE</button>
+  </form>
 </section>
 
 <footer>
-  © 2026 Monroe Films · Cinematic Storytelling
+  © 2026 Monroe Films · All Rights Reserved
 </footer>
 
-<script src="https://player.vimeo.com/api/player.js"></script>
 </body>
 </html>
