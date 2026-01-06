@@ -11,6 +11,7 @@
 :root {
   --gold: #d4af37;
   --soft-gold: #f5e6b8;
+  --cream: #f2e6cf;
   --black: #000;
 }
 
@@ -77,61 +78,39 @@ body {
   color: black;
 }
 
-/* DARK SECTION */
+/* DARK INTRO SECTION */
 .dark-section {
-  padding: 4rem 2rem;
+  padding: 3.5rem 2rem;
   text-align: center;
   background: black;
 }
 
-.dark-section h2 {
-  font-family: 'Cinzel', serif;
-  font-size: 2.6rem;
-  margin-bottom: 1rem;
-}
-
 .dark-section p {
   color: var(--soft-gold);
-  max-width: 700px;
+  max-width: 720px;
   margin: auto;
+  font-size: 1.05rem;
 }
 
-/* LIGHT SERVICES SECTION */
-.services-section {
+/* CREAM STORY SECTION */
+.story {
   background: var(--cream);
-  color: black;
+  color: #111;
   padding: 4rem 2rem;
   text-align: center;
 }
 
-.services-section h3 {
+.story h2 {
   font-family: 'Cinzel', serif;
-  font-size: 2.3rem;
-  margin-bottom: 2rem;
+  font-size: 2.8rem;
+  margin-bottom: 1.5rem;
 }
 
-.services {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 2rem;
-  max-width: 1100px;
+.story p {
+  max-width: 760px;
   margin: auto;
-}
-
-.service {
-  text-align: center;
-}
-
-.service img {
-  width: 100%;
-  height: auto;
-  display: block;
-}
-
-.service h4 {
-  margin-top: 1rem;
-  font-weight: normal;
-  letter-spacing: 0.1em;
+  font-size: 1.05rem;
+  line-height: 1.6;
 }
 
 /* CONTACT */
@@ -204,30 +183,27 @@ footer {
   </div>
 </section>
 
-<!-- SERVICES -->
-<section class="services-section">
-  <h3>Capturing Timeless Moments</h3>
-   <p>
-    With over 25 years of filmmaking experience we bring your story to life with cinematic artistry.
+<!-- PHILOSOPHY (DARK) -->
+<section class="dark-section">
+  <p>
+    We believe film is more than documentation — it is art.
+    Every frame is an opportunity to express emotion, preserve meaning,
+    and transform moments into lasting visual stories.
   </p>
-  <div class="services">
-    <div class="service">
-      <img src="commercial.jpg" alt="">
-      <h4>Commercial</h4>
-    </div>
-    <div class="service">
-      <img src="residential.jpg" alt="">
-      <h4>Residential</h4>
-    </div>
-    <div class="service">
-      <img src="sports.jpg" alt="">
-      <h4>Sports</h4>
-    </div>
-    <div class="service">
-      <img src="weddings.jpg" alt="">
-      <h4>Weddings</h4>
-    </div>
-  </div>
+</section>
+
+<!-- STORY (CREAM) -->
+<section class="story">
+  <h2>Capturing Timeless Moments</h2>
+  <p>
+    At Monroe Films, we approach every project with the mindset of an artist
+    and the intention of a storyteller. No matter who you are or what story
+    you’re telling, our goal is the same — to see the heart of it, shape it
+    with intention, and bring it to life through cinematic imagery.
+    <br><br>
+    We don’t believe in one-size-fits-all films. We believe in visuals that
+    reflect you — your energy, your purpose, your moment in time.
+  </p>
 </section>
 
 <!-- CONTACT -->
@@ -248,4 +224,3 @@ footer {
 
 </body>
 </html>
-
